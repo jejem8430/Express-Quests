@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const mysql = require("mysql2/promise");
 
 const database = mysql.createPool({
@@ -12,7 +13,7 @@ const database = mysql.createPool({
 database
   .query("select * from movies")
   .then((result) => {
-    console.log(result);
+   
   })
   .catch((err) => {
     console.error(err);
